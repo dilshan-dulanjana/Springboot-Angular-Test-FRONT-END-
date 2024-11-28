@@ -1,0 +1,61 @@
+<div>
+    <form (ngSubmit) ="getStudentBySearch()" class="form-inline my-2 my-lg-0">
+        <div class="row">
+            <div class="col">
+                <input id="searchInput" class="form-control mr-sm-2 w-50%" type="search" placeholder="Search" aria-label="Search"/>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+     
+        </div>
+
+    </form>
+        <div class="row">
+            <form (ngSubmit)="onUpdate()">
+                <div class="form-group">
+                    <input   [(ngModel)]="student.id" type="text" class="form-control" id="studentID" [(ngModel)]="student.id" name="studentID"
+                    required placeholder="Student ID" disabled /> 
+                </div>
+              
+                <div class="form-group">
+                  <label for="txt-studentName">Student Name :</label>
+                  
+                  <input   [(ngModel)]="student.studentName" type="text" class="form-control" id="txt-studentName" [(ngModel)]="student.studentName" name="studentName"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="txt-studentAge">Student Age: </label>
+                  <input [(ngModel)]="student.studentAge" type="number" class="form-control" id="txt-studentAge" [(ngModel)]="student.studentAge" name="studentAge"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="txt-studentContact">Student Contact: </label>
+                  <input [(ngModel)]="student.studentContact" type="text" class="form-control" id="txt-studentContact" [(ngModel)]="student.studentContact"
+                    name="studentContact" required />
+                </div>
+                <div class="form-group">
+                  <label for="txt-guardianName">Guardian Name: </label>
+                  <input [(ngModel)]="student.guardianName" type="text" class="form-control" id="txt-guardianName" [(ngModel)]="student.guardianName" name="guardianName" required />
+                </div>
+                <div class="form-group">
+                  <label for="txt-gurdianAdress">Guardian Address: </label>
+                  <input [(ngModel)]="student.gurdianAdderss" type="text" class="form-control" id="txt-guardianAdress" [(ngModel)]="student.gurdianAdderss"
+                    name="guardianAddress" required />
+                </div>
+                <div class="form-group">
+                  <label for="txt-guardianContact">Guardian Contact: </label>
+                  <input [(ngModel)]="student.gurdianContact" type="text" class="form-control" id="txt-guardianContact" [(ngModel)]="student.gurdianContact"
+                    name="guardianContact" required />
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="onUpdate()">Update</button>
+            </form>
+            <div class="mt-2">
+                <button  class="btn btn-danger " (click)="deleteStudent()">Delete</button>
+            </div >
+               
+           
+        </div>
+      
+      
+</div>
